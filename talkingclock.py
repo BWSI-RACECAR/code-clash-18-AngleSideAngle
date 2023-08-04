@@ -38,7 +38,7 @@ class Solution:
             hour = int(input_time[:colon])
             minute = int(input_time[colon+1:])
 
-            am = "" if hour < 12 else " pm"
+            am = "am" if hour < 12 else "pm"
             hour %= 12
                  
             words = {
@@ -81,7 +81,7 @@ class Solution:
             if minute_word == "oh":
                 minute_word = ""
 
-            return f"It's {words[hour]}{minute_word}{am}"
+            return f"It's {words[hour]}{minute_word} {am}"
 
 def main():
      str1=input()
