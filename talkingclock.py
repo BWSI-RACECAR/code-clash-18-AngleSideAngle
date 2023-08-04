@@ -37,7 +37,7 @@ class Solution:
             hour = int(input_time[:2])
             minute = int(input_time[3:])
 
-            am = "AM" if hour < 12 else "PM"
+            am = "am" if hour < 12 else "pm"
             hour %= 12
                  
             words = {
