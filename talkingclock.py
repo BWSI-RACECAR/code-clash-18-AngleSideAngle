@@ -76,6 +76,8 @@ class Solution:
                 minute_word = f"{prefixes[minute // 10] if minute // 10 in prefixes.keys() else words[minute // 10]} {words[minute % 10]}"
             else:
                 minute_word = words[minute]
+            if minute_word == "twelve":
+                minute_word = ""
 
             return f"It's {words[hour]} {minute_word} {am}"
 
