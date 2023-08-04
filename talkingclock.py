@@ -42,7 +42,7 @@ class Solution:
             hour %= 12
                  
             words = {
-                0: "",
+                0: "twelve",
                 1: "one",
                 2: "two",
                 3: "four",
@@ -73,13 +73,12 @@ class Solution:
 
             minute_word = ""
 
-            if minute // 10 in prefixes.keys():
+            if minute = 0:
+                minute_word = ""
+            elif minute // 10 in prefixes.keys():
                 minute_word = f" {prefixes[minute // 10] if minute // 10 in prefixes.keys() else words[minute // 10]} {words[minute % 10]}"
             else:
                 minute_word = f" {words[minute]}"
-
-            if minute_word == "oh":
-                minute_word = ""
 
             return f"It's {words[hour]}{minute_word} {am}"
 
