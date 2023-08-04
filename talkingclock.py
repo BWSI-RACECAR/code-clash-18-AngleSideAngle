@@ -74,7 +74,7 @@ class Solution:
             if minute // 10 in prefixes:
                 minute_word = f"{prefixes[minute // 10]} words[minute % 10]"
 
-            return f"It's {words[hour] {minute_word} {am}}"
+            return f"It's {words[hour]} {minute_word} {am}}"
 
 def main():
      str1=input()
