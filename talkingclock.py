@@ -42,7 +42,7 @@ class Solution:
             hour %= 12
                  
             words = {
-                0: "twelve",
+                0: "",
                 1: "one",
                 2: "two",
                 3: "four",
@@ -78,7 +78,7 @@ class Solution:
             else:
                 minute_word = words[minute]
 
-            if minute_word == "twelve":
+            if minute_word == "oh":
                 minute_word = ""
 
             return f"It's {words[hour]} {minute_word} {am}"
