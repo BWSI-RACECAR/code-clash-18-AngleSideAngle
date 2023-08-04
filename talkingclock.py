@@ -34,8 +34,9 @@ class Solution:
             #return type: string
             
             #TODO: Write code below to return a string with the solution to the prompt.
-            hour = int(input_time[:2])
-            minute = int(input_time[3:])
+            colon = input_time.find(":")
+            hour = int(input_time[:colon])
+            minute = int(input_time[colon+1:])
 
             am = "am" if hour < 12 else "pm"
             hour %= 12
@@ -76,6 +77,7 @@ class Solution:
                 minute_word = f"{prefixes[minute // 10] if minute // 10 in prefixes.keys() else words[minute // 10]} {words[minute % 10]}"
             else:
                 minute_word = words[minute]
+
             if minute_word == "twelve":
                 minute_word = ""
 
