@@ -74,14 +74,14 @@ class Solution:
             minute_word = ""
 
             if minute // 10 in prefixes.keys():
-                minute_word = f"{prefixes[minute // 10] if minute // 10 in prefixes.keys() else words[minute // 10]} {words[minute % 10]}"
+                minute_word = f" {prefixes[minute // 10] if minute // 10 in prefixes.keys() else words[minute // 10]} {words[minute % 10]}"
             else:
-                minute_word = words[minute]
+                minute_word = f" {words[minute]}"
 
             if minute_word == "oh":
                 minute_word = ""
 
-            return f"It's {words[hour]} {minute_word} {am}"
+            return f"It's {words[hour]}{minute_word} {am}"
 
 def main():
      str1=input()
