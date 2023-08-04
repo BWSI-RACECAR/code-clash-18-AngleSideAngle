@@ -35,7 +35,7 @@ class Solution:
             
             #TODO: Write code below to return a string with the solution to the prompt.
             hour = int(input_time[:2])
-            minute = input_time[3:]
+            minute = int(input_time[3:])
 
             am = "AM" if hour < 12 else "PM"
             hour %= 12
