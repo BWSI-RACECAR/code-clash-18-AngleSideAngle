@@ -76,7 +76,7 @@ class Solution:
             if minute == 0:
                 minute_word = ""
             elif minute // 10 in prefixes.keys():
-                minute_word = f" {prefixes[minute // 10] if minute // 10 in prefixes.keys() else words[minute // 10]} {words[minute % 10]}"
+                minute_word = f" {prefixes[minute // 10] if minute // 10 in prefixes.keys() else words[minute // 10]}{(' ' + words[minute % 10]) if words[minute % 10] == 0 else ''}"
             else:
                 minute_word = f" {words[minute]}"
 
